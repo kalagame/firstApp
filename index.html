@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DHTMLx sample</title>
+	<script src="codebase/touchui.js" type= "text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="codebase/touchui.css">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"> <!--กำหนดมุมมอง -->
+
+</head>
+
+<body>
+	
+	<canvas> id="mycanvas" width ="200" height ="200"</canvas>
+	
+	<div id="dhx_type_menu_container" style="display:none;">
+    	<div class="menu_img" style="background:url(#Img#) no-repeat scroll 50% 50% transparent;">&nbsp</div>
+   		<div class="menu_content">
+       		<h3 class="menu_content_header" style="">#Name#</h3><p class="menu_content_description">#Description#</p>
+   		</div>
+	</div>
+	<SCRIPT TYPE="text/javascript">
+	dhx.Type(dhx.ui.dataview,{
+    	name:"menu",
+    	template:"html->dhx_type_menu_container",
+    	height: 120,
+    	width: 255,
+    	margin: 5,
+    	padding: 0
+	});
+	
+	dhx.ready(function(){
+   dhx.ui({
+       id:"layout",
+       cols:[
+           {
+               width:275,
+               rows:[
+                   {
+                       view:"dataview",
+                       type:"menu",
+                       id:"menu",
+                       url:"xml/menu.xml",
+                       datatype:"xml"
+                   },
+                   {
+                       template:"Order",
+                       height:120
+                   }
+               ]
+           },
+           {
+               template:"Menu items"
+           }
+       ]        
+   });
+});
+	</SCRIPT>
+ 
+
+</body>
+</html>

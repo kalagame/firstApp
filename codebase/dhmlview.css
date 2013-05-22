@@ -1,0 +1,26 @@
+.menu_img {
+    float:left;
+    width:108px;
+    height:108px;
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow:2px 2px 3px #2f3132;
+    margin: 5px;
+}
+.menu_content {
+    float:left;
+    width:100px;
+    line-height: 17px;
+    margin:0 8px;
+}
+.menu_content_header {
+    font-family:Georgia;
+    font-size:27px;
+    font-weight:normal;
+    color:white;
+    margin:9px 0 0;
+}
+.menu_content_description {
+    font-family:Helvetica, Tahoma, Arial;
+    font-size:12px;
+    color:white;
+}
